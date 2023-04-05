@@ -124,8 +124,8 @@ header.hero-header .hero-content {
 
 section {
 	height: 100vh;
-  height: 100svh;
-  display: flex;
+    height: 100svh;
+    display: flex;
 	justify-content: center;
 	align-items: center;
 	color: var(--color-text);
