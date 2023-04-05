@@ -1,0 +1,150 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+	scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0.01ms !important;
+	scroll-behavior: auto !important;
+  }
+}
+/* -------------*/
+:root {
+	--color-primary: #2c3e50;  /* dark blue */
+	--color-secondary: #f39c12;  /* orange */
+	--color-background: #f5f5f5;  /* light gray */
+	--color-text: #333;  /* dark gray */
+	--color-accent: #3498db;  /* blue */
+}
+
+
+nav {
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header.hero-header {
+  position: relative;
+  height: 100vh;
+  background-color: var(--color-primary);
+}
+
+header.hero-header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+header.hero-header .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+section {
+	height: 100vh;
+  height: 100svh;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-text);
+  filter: opacity(80%) brightness(90%);
+}
+
+/* Add some padding to each section to avoid content being cut off */
+section:not(:last-child) {
+  padding-bottom: 100px; /* adjust as needed */
+}
+
+/* Set the background color of odd-numbered sections to the primary color */
+section:nth-of-type(odd) {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* Set the background color of even-numbered sections to the secondary color */
+section:nth-of-type(even) {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
